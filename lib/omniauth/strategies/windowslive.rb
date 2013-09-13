@@ -12,11 +12,11 @@ module OmniAuth
       option :client_options, {
         :site => 'https://login.live.com',
         :authorize_url => '/oauth20_authorize.srf',
-        :token_url => '/token'
+        :token_url => '/oauth20_token.srf'
       }
 
       option :authorize_params, {
-        :response_type => 'token'
+        :response_type => 'code'
       }
 
       option :name, 'windowslive'
