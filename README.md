@@ -4,17 +4,21 @@ This gem contains the unofficial WindowsLive strategy for OmniAuth.
 
 ## Basic Usage
 
-	use OmniAuth::Builder do
-		provider "windowslive", ENV['WINDOWSLIVE_CLIENT_ID'], ENV['WINDOWSLIVE_SECRET'], :scope => 'wl.basic'
-	end
+-  First, you must use Devise and in your rails app.
+-  Then, install the following gems:
+  
+-  gem 'omniauth'
+-  gem 'omniauth-windowslive', git: 'git://github.com/jpmermoz/omniauth-windowslive.git'
 
-## Supported Flows
-
-for create app
-# https://manage.dev.live.com/Applications/Index?wa=wsignin1.0 OR https://manage.dev.live.com/AddApplication.aspx?tou=1
+-  Go to initializers/devise.rb and add the following line:
+-  require "omniauth-windowslive"
+-  config.omniauth :windowslive, "APPID", "APPSECRET", { :scope => "wl.basic" }
+  
+-  (Other valid scopes are: "wl.imap", "wl.emails", etc.
 
 ## Ruby
 
 Tested with the following Ruby versions:
 
 - RUBY 1.9.3-p0
+- RUBY 2.0.0
