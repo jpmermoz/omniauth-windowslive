@@ -7,8 +7,8 @@ This gem contains the unofficial WindowsLive strategy for OmniAuth.
 First, you must use Devise and in your rails app.
 Then, put the following gems in your Gemfile:
   
-  $ gem 'omniauth'
-  $ gem 'omniauth-windowslive', git: 'git://github.com/jpmermoz/omniauth-windowslive.git'
+    gem 'omniauth'
+    gem 'omniauth-windowslive', git: 'git://github.com/jpmermoz/omniauth-windowslive.git'
 
 Go to initializers/devise.rb and add the following line:
 
